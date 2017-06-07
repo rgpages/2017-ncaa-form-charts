@@ -1,4 +1,4 @@
-This is a Tarbell project that takes a [complicated Google spreadsheet](https://docs.google.com/spreadsheets/d/1FIl_mXfBWeFonUBK8OVK3HvQgS4SmsP406h90xpcS24/edit#gid=1743693722) and generates form charts. Here's what I did from start to finish.
+This is a Tarbell project that takes a [complicated Google spreadsheet](https://docs.google.com/spreadsheets/d/1FIl_mXfBWeFonUBK8OVK3HvQgS4SmsP406h90xpcS24/edit#gid=1743693722) and generates form charts. [Live in the wild.](http://registerguard.com/rg/sports/trackandfield/35651655-345/2017-outdoor-ncaa-track--field-championship-form-charts.html.csp) Here's what I did from start to finish.
 
 # Before you begin
 
