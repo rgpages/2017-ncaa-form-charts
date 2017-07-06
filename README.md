@@ -30,7 +30,7 @@ Ok, now that we have all the data in place, let's work on the template.
 
 This project is very simple (I ~should~ did make a Blueprint). The `_blueprint/_base.html` contains all the shell, `/index.html` and `raw/index.html` act as middlemen and the goods are in the `_includes` directory.
 
-## _story.html
+## _base.html
 
 ### Extra CSS
 
@@ -46,9 +46,15 @@ This gets built into the template after jQuery loads. BUT should be included in 
 
 ## index.html
 
-The index file has those three parts and an additional macro.
+The index file has those three parts included.
 
-### macro event()
+## _includes
+
+This directory holds all the content. The filenames are pretty self explanatory. 
+
+### _content.html
+
+#### macro event()
 
 This macro holds the inner loop of this project that loops over each event table. The key to this is: `{% for s in g.current_site.data[eslug] %}`. I had to reach out to Chris Amico because I was having trouble with a loop within a loop. He turned me on to the `g.current_site.data[variable_that_holds_sheet_name]`. That `eslug` variable gets passed in and contains the specific event slug.
 
@@ -56,11 +62,7 @@ Inside that loop there's a big conditional to spit out different HTML depending 
 
 And the loop ends.
 
-### Extra CSS
-
-This contains CSS specific to this project. I style the red buttons and use flexbox to align them. Then I style the event buttons and the event tables. I don't think there's anything terribly complicated in there.
-
-### Content
+#### Content
 
 The content is wrapped with #story. This makes it easier to copy/paste into DT. We open with some text, then move into the filter buttons. The IDs on those are used by jQuery later.
 
@@ -70,7 +72,13 @@ Then we have open up the event div container, add the slug as id, the appropriat
 
 Next we hit the macro and pass through the slug. Then we close everything out.
 
-### Extra JS
+### _css.html
+
+This contains CSS specific to this project. I style the red buttons and use flexbox to align them. Then I style the event buttons and the event tables. I don't think there's anything terribly complicated in there.
+
+
+
+### _js.html
 
 Here is where we include any project-specific JS. I include jQuery if it hasn't been loaded already. In the template it will be loaded, but if we copy into DT, it wouldn't be. 
 
