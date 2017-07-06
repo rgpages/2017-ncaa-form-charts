@@ -1,5 +1,11 @@
 This is a Tarbell project that takes a [complicated Google spreadsheet](https://docs.google.com/spreadsheets/d/1FIl_mXfBWeFonUBK8OVK3HvQgS4SmsP406h90xpcS24/edit#gid=1743693722) and generates form charts. [Live in the wild.](http://registerguard.com/rg/sports/trackandfield/35651655-345/2017-outdoor-ncaa-track--field-championship-form-charts.html.csp) Here's what I did from start to finish.
 
+# Blueprint update (July 2017)
+
+I created a blueprint for form charts and have integrated that technology so this can act as an example. I also added a `raw` directory for easier copy/pasting into DT. This required me to create an includes folder where all of the content went. I will try to update the documentation below to the best of my ability but there may be inconsistencies.
+
+See registerguard/form-chart-blueprint for more on creating a new project from a blueprint. 
+
 # Before you begin
 
 Get the form charts copy edited.
@@ -22,7 +28,7 @@ Ok, now that we have all the data in place, let's work on the template.
 
 # Tarbell template.
 
-This project is very simple (I should make a Blueprint). The _story.html contains all the template stuff, headline, byline and three includes.
+This project is very simple (I ~should~ did make a Blueprint). The `_blueprint/_base.html` contains all the shell, `/index.html` and `raw/index.html` act as middlemen and the goods are in the `_includes` directory.
 
 ## _story.html
 
